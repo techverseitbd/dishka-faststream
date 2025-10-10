@@ -1,10 +1,40 @@
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
+
 [project]
 name = "dishka-faststream"
 version = "0.0.2"
 description = "Integration package for Dishka DI and FastStream framework"
 readme = "README.md"
+
+authors = [
+    { name = "Nikita Pastukhov", email = "nikita@pastukhov-dev.com" },
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
 requires-python = ">=3.10"
+
 dependencies = [
     "dishka",
     "faststream",
 ]
+
+[project.urls]
+Source = "https://github.com/faststream-community/dishka-faststream"
+Homepage = "https://github.com/faststream-community/dishka-faststream"
+Tracker = "https://github.com/faststream-community/dishka-faststream/issues"
+
+[dependency-groups]
