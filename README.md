@@ -1,4 +1,4 @@
-# FastStream
+# FastStream integration for Dishka
 
 Though it is not required, you can use *dishka-faststream* integration. It features:
 
@@ -12,15 +12,35 @@ You can use auto-injection for `FastStream` 0.5.0 and higher. For older version 
 > 
 > If you are using **FastAPI plugin** of **FastStream** you need to use both dishka integrations, but you can share the same container.
 > 
-> * Call `dishka.integrations.faststream.setup_dishka` on faststream broker or router.
+> * Call `dishka_faststream.setup_dishka` on faststream broker or router.
 > * Call `dishka.integrations.fastapi.setup_dishka` on fastapi app.
+
+## Installation
+
+Install using `pip`
+
+```sh
+pip install dishka-faststream
+```
+
+Or with `uv`
+
+```sh
+uv add dishka-faststream
+```
+
+## Requirements:
+
+* Python 3.10+
+* Dishka >= 1.7.0
+* FastStream >= 0.5.0
 
 ## How to use
 
 1. Import
 
 ```python
-from dishka.integrations.faststream import (
+from dishka_faststream import (
     FromDishka,
     inject,
     setup_dishka,
@@ -95,10 +115,10 @@ docker run -d --name rabbitmq \
 import uvicorn
 from dishka import Provider, Scope, provide
 from dishka import make_async_container
-from dishka.integrations import faststream as faststream_integration
+import dishka_faststream as faststream_integration
 from dishka.integrations import litestar as litestar_integration
 from dishka.integrations.base import FromDishka
-from dishka.integrations.faststream import inject as faststream_inject
+from dishka_faststream import inject as faststream_inject
 from dishka.integrations.litestar import inject as litestar_inject
 from faststream.rabbit import RabbitBroker, RabbitRouter
 from litestar import Litestar, route, HttpMethod
@@ -162,10 +182,10 @@ from fastapi import APIRouter, FastAPI
 from faststream.rabbit import RabbitBroker, RabbitRouter
 from dishka import Provider, Scope, make_async_container, provide
 from dishka.integrations import fastapi as fastapi_integration
-from dishka.integrations import faststream as faststream_integration
+import dishka_faststream as faststream_integration
 from dishka.integrations.base import FromDishka
 from dishka.integrations.fastapi import DishkaRoute
-from dishka.integrations.faststream import inject as faststream_inject
+from dishka_faststream import inject as faststream_inject
 
 
 class SomeDependency:
@@ -230,7 +250,7 @@ from collections.abc import AsyncIterator
 import pytest
 from dishka import AsyncContainer, make_async_container
 from dishka import Provider, Scope, provide
-from dishka.integrations import faststream as faststream_integration
+import dishka_faststream as faststream_integration
 from dishka.integrations.base import FromDishka as Depends
 from faststream import FastStream, TestApp
 from faststream.rabbit import RabbitBroker, TestRabbitBroker, RabbitRouter

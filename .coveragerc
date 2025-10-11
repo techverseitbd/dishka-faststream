@@ -1,0 +1,13 @@
+[run]
+parallel = True
+data_file = .coverage
+source = dishka_faststream
+omit =
+    dishka_faststream/tests/*
+
+[report]
+show_missing = True
+skip_covered = True
+exclude_lines =
+    pragma: no cover
+    pragma: no coverage
