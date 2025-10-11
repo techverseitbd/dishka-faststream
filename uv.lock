@@ -205,7 +205,7 @@ wheels = [
 
 [[package]]
 name = "dishka-faststream"
-version = "1.0.0"
+version = "0.5.0"
 source = { editable = "." }
 dependencies = [
     { name = "dishka" },
@@ -234,8 +234,8 @@ test = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dishka", specifier = ">=1.7.0" },
-    { name = "faststream", specifier = ">=0.5.0" },
+    { name = "dishka", specifier = ">=1.7,<2" },
+    { name = "faststream", specifier = ">=0.5,<0.7" },
 ]
 
 [package.metadata.requires-dev]
