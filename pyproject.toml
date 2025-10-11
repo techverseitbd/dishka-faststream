@@ -38,3 +38,24 @@ Homepage = "https://github.com/faststream-community/dishka-faststream"
 Tracker = "https://github.com/faststream-community/dishka-faststream/issues"
 
 [dependency-groups]
+dev = [
+    "dishka-faststream[lint,test]",
+]
+lint = [
+    "mypy>=1.18.2",
+    "ruff>=0.14.0",
+]
+test = [
+    "nox>=2025.5.1",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "pytest-cov>=7.0.0",
+]
+
+[tool.uv.workspace]
+members = [
+    ".",
+]
+
+[tool.uv.sources]
+dishka-faststream = { workspace = true }
