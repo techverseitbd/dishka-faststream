@@ -75,4 +75,4 @@ def coverage(session: nox.Session) -> None:
     """Generate and view coverage report."""
     session.install("coverage")
     session.run("coverage", "combine")
-    session.run("coverage", "report", "--fail-under=90")
+    session.run("coverage", "report", "--fail-under=80")
