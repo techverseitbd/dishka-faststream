@@ -17,7 +17,7 @@ from typing import (
 
 from dishka import AsyncContainer, Provider, Scope, from_context
 from dishka.integrations.base import InjectFunc, wrap_injection
-from faststream import BaseMiddleware, FastStream, context
+from faststream import BaseMiddleware, FastStream, context  # type: ignore[attr-defined]
 from faststream.broker.core.usecase import BrokerUsecase as BrokerType
 from faststream.broker.message import StreamMessage
 from faststream.types import DecodedMessage
@@ -37,7 +37,7 @@ try:
     from faststream.asgi import AsgiFastStream
 
 except ImportError:
-    Application: TypeAlias = FastStream  # type: ignore[no-redef,misc]
+    Application: TypeAlias = FastStream
 
 else:
     Application: TypeAlias = FastStream | AsgiFastStream  # type: ignore[no-redef,misc]
@@ -47,7 +47,7 @@ try:
 except ImportError:
     pass
 else:
-    Application |= StreamRouter  # type: ignore[assignment]
+    Application |= StreamRouter
 
 
 class ApplicationLike(Protocol):
@@ -153,7 +153,7 @@ class _DishkaMiddleware(BaseMiddleware):
         self.container = container
         super().__init__(*args, **kwargs)
 
-    async def consume_scope(  # type: ignore[misc]
+    async def consume_scope(
         self,
         call_next: Callable[[Any], Awaitable[Any]],
         msg: StreamMessage[Any],
