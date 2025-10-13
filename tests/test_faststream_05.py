@@ -69,7 +69,7 @@ async def get_with_app(
 @pytest.mark.asyncio()
 async def test_app_dependency(app_provider: AppProvider) -> None:
     async with dishka_app(get_with_app, app_provider) as client:
-        assert await client.publish("", "test", rpc=True) == "passed"
+        assert await client.publish("", "test", rpc=True) == "passed"  # type: ignore[call-overload]
 
         app_provider.mock.assert_called_with(APP_DEP_VALUE)
         app_provider.app_released.assert_not_called()
@@ -87,7 +87,7 @@ async def get_with_request(
 @pytest.mark.asyncio()
 async def test_request_dependency(app_provider: AppProvider) -> None:
     async with dishka_app(get_with_request, app_provider) as client:
-        assert await client.publish("", "test", rpc=True) == "passed"
+        assert await client.publish("", "test", rpc=True) == "passed"  # type: ignore[call-overload]
 
         app_provider.mock.assert_called_with(REQUEST_DEP_VALUE)
         app_provider.request_released.assert_called_once()
@@ -104,7 +104,7 @@ async def test_autoinject_before_subscriber(app_provider: AppProvider) -> None:
     broker.subscriber("test")(get_with_request)
 
     async with TestNatsBroker(broker) as br:
-        assert await br.publish("", "test", rpc=True) == "passed"
+        assert await br.publish("", "test", rpc=True) == "passed"  # type: ignore[call-overload]
 
         app_provider.mock.assert_called_with(REQUEST_DEP_VALUE)
         app_provider.request_released.assert_called_once()
@@ -123,7 +123,7 @@ async def test_autoinject_after_subscriber(app_provider: AppProvider) -> None:
     setup_dishka(container, app=app, auto_inject=True)
 
     async with TestNatsBroker(broker) as br:
-        assert await br.publish("", "test", rpc=True) == "passed"
+        assert await br.publish("", "test", rpc=True) == "passed"  # type: ignore[call-overload]
 
         app_provider.mock.assert_called_with(REQUEST_DEP_VALUE)
         app_provider.request_released.assert_called_once()
@@ -139,7 +139,7 @@ async def test_faststream_with_broker(app_provider: AppProvider) -> None:
     setup_dishka(container, broker=broker, auto_inject=True)
 
     async with TestNatsBroker(broker) as br:
-        assert await br.publish("", "test", rpc=True) == "passed"
+        assert await br.publish("", "test", rpc=True) == "passed"  # type: ignore[call-overload]
 
         app_provider.mock.assert_called_with(REQUEST_DEP_VALUE)
         app_provider.request_released.assert_called_once()

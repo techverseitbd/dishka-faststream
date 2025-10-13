@@ -10,13 +10,13 @@ UserDep = NewType("UserDep", str)
 StepDep = NewType("StepDep", str)
 
 AppDep = NewType("AppDep", str)
-APP_DEP_VALUE = "APP"
+APP_DEP_VALUE = AppDep("APP")
 
 RequestDep = NewType("RequestDep", str)
-REQUEST_DEP_VALUE = "REQUEST"
+REQUEST_DEP_VALUE = RequestDep("REQUEST")
 
 WebSocketDep = NewType("WebSocketDep", str)
-WS_DEP_VALUE = "WS"
+WS_DEP_VALUE = WebSocketDep("WS")
 
 AppMock = NewType("AppMock", Mock)
 
@@ -31,7 +31,7 @@ class AppProvider(Provider):
         self.websocket_released = Mock()
         self.db_session_released = Mock()
         self.mock = Mock()
-        self.app_mock = AppMock(Mock())
+        self._app_mock = AppMock(Mock())
 
     @provide(scope=Scope.APP)
     def app(self) -> Iterable[AppDep]:
@@ -50,7 +50,7 @@ class AppProvider(Provider):
 
     @provide(scope=Scope.REQUEST)
     def user(self, context: FromDishka[ContextDep]) -> Iterable[UserDep]:
-        yield f"user_id.from_context({context})"
+        yield UserDep(f"user_id.from_context({context})")
         self.db_session_released()
 
     @provide(scope=Scope.REQUEST)
@@ -59,7 +59,7 @@ class AppProvider(Provider):
 
     @provide(scope=Scope.APP)
     def app_mock(self) -> AppMock:
-        return self.app_mock
+        return self._app_mock
 
     @provide(scope=Scope.STEP)
     def step(self, request: FromDishka[RequestDep]) -> StepDep:
