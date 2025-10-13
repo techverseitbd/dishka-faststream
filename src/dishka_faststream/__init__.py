@@ -10,6 +10,7 @@ FASTSTREAM_06 = FASTSTREAM_VERSION.startswith("0.6")
 
 if FASTSTREAM_05:
     from .faststream_05 import FastStreamProvider, inject, setup_dishka
+
     warnings.warn(
         (
             "Support for version FastStream 0.5.* will be removed "

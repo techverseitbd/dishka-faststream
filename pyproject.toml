@@ -50,10 +50,15 @@ Tracker = "https://github.com/faststream-community/dishka-faststream/issues"
 dev = [
     {include-group = "lint"},
     {include-group = "test"},
+    "prek>=0.2.5",
 ]
 lint = [
+    "bandit>=1.8.6",
+    "codespell>=2.4.1",
     "mypy>=1.18.2",
     "ruff>=0.14.0",
+    "semgrep>=1.139.0",
+    "zizmor>=1.14.2",
 ]
 test = [
     "nox>=2025.5.1",
@@ -81,3 +86,6 @@ warn_unused_ignores = true
 disallow_incomplete_defs = true
 disallow_untyped_decorators = true
 disallow_any_unimported = false
+
+[tool.bandit]
+skips = ["B101"]

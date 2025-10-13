@@ -83,8 +83,7 @@ def setup_dishka(
     """
     if (app and broker) or (not app and not broker):
         raise ValueError(  # noqa: TRY003
-            "You must provide either app or broker "
-            "to setup dishka integration.",
+            "You must provide either app or broker to setup dishka integration.",
         )
 
     if finalize_container:
