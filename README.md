@@ -15,9 +15,9 @@ Though it is not required, you can use *dishka-faststream* integration. It featu
 You can use auto-injection for `FastStream` 0.5.0 and higher. For older version you need to specify `@inject` manually.
 
 > **Note**
-> 
+>
 > If you are using **FastAPI plugin** of **FastStream** you need to use both dishka integrations, but you can share the same container.
-> 
+>
 > * Call `dishka_faststream.setup_dishka` on faststream broker or router.
 > * Call `dishka.integrations.fastapi.setup_dishka` on fastapi app.
 
