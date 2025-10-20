@@ -16,6 +16,8 @@ name = "dishka-faststream"
 dynamic = ["version"]
 description = "Integration package for Dishka DI and FastStream framework"
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 
 authors = [
     { name = "Nikita Pastukhov", email = "nikita@pastukhov-dev.com" },
